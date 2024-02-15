@@ -1,0 +1,94 @@
+#navbar {
+    background-color: #0f1111;
+    height: 60px;
+    color: white;
+}
+
+button {
+    background-color: #f0880f;
+}
+
+#logo {
+    color: #f0880f;
+    font-size: 25px;
+}
+
+a {
+    margin-right: 200px;
+}
+
+#inline-div{
+    display: inline-block;
+    /*width: 100px; */
+    height: 100px;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    text-align: left;
+    vertical-align: top;
+}
+
+#use-flex{
+    display: inline-flex;
+    flex: 1;
+    justify-content: space-between;
+    height: 100px;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid white;
+    text-align: left;
+    vertical-align: top;
+
+}
+
+.red {
+    background-color: red;
+    width: 20%;
+}
+
+.green {
+    background-color: green;
+    width: 30%;
+}
+
+.blue {
+    background-color: blue;
+    width: 10%;
+}
+
+.grid-container {
+    display: inline-grid;
+    width: 100%;
+    grid-template-columns: auto auto 60px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.flex-table {
+    display: table;  /* Updated */
+    width: 100%;     /* Added */
+    /* table-layout: fixed;   Added */
+}
+
+.flex-table thead,
+.flex-table tbody {
+    width: 100%;     /* Added */
+}
+
+.flex-table th,
+.flex-table td {
+    width: auto;  /* Added */
+}
+
+.flex-table th:first-child,
+.flex-table td:first-child {
+    min-width: 25%;  /* Updated */
+}

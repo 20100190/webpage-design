@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Example Webpage Layout</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="static/css/style.css">
+        <link rel="stylesheet" href="static2/css/styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="static/css/toastr.css">
+    </head>
+    <body>
+        
+
+        <table id="dynamic-info" class="table worksheet flex-table">
+            <thead>
+                <tr>
+                    <!-- Dynamically generated column headers -->
+                    {% for column in dataset.columns %}
+                        <th class="green">{{ column.name }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamically generated rows and data cells -->
+                {% for row in dataset.rows %}
+                    <tr>
+                        {% for cell in row.cells %}
+                            <td>{{ cell.value }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
